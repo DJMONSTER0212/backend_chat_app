@@ -62,7 +62,7 @@ const server = app.listen(process.env.PORT||5000,console.log("Server Running on 
 const io = require('socket.io')(server,{
     pingTimeout:60000,     // amout of time it will wait while being inactive 
     cors:{
-        origin:"http://localhost:3000",
+        origins: '*:*',
     }
 });
 
@@ -73,7 +73,7 @@ io.on("connection",(socket)=>{
         socket.join(userData._id);
         console.log(userData._id)
         socket.emit("connected");
-    })
+    }) 
 
     socket.on("join chat",(room)=>{
         socket.join(room);
