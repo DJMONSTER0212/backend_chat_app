@@ -4,7 +4,7 @@ const userSchema = mongoose.Schema({
     name:{type:String,required:true},
     email:{type:String,required:true ,unique :true},
     password:{type:String,required:true},
-    pic: { type: String, default:"https://www.ps4wallpapers.com/wp-content/uploads/2017/11/PS4Wallpapers.com_5a1b8d9f24d92_Mia-Khalifa-Beautiful-Hd-Wallpapers.jpg"},            //because link is also a string
+   pic: { type: String, default:"https://w7.pngwing.com/pngs/81/570/png-transparent-profile-logo-computer-icons-user-user-blue-heroes-logo-thumbnail.png"},            //because link is also a string
  },{
     timestamps:true
  })
